@@ -30,30 +30,6 @@ export default function Page() {
   function openMenu() {
     menuRef?.current?.classList.toggle("menu-mobile")
   }
-  
-  const scrolled = window.scrollY
-  
-  const toggleVisible = () => {
-    if (scrolled >= 300) {
-      setVisible(true)
-      setChangeBg(true)
-    }
-    else if (scrolled < 300) {
-      setVisible(false)
-    }
-  }
-
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    }); 
-  }
-
-  useEffect(() => {
-    setInterval(function() {window.addEventListener('scroll', toggleVisible); }, 100)
-   
-  }); 
 
   return (
     <div className='page-container'>
@@ -133,8 +109,8 @@ export default function Page() {
         <div className='project-contents'>
           <div className='project-item'>
             <Image width={800}
-      height={500} className= "project-img" src='/assets/img-dev.png' alt="" />
-            <h4 className='project-name'>Nome do projeto</h4>
+      height={500} className= "project-img" src='/assets/project1.svg' alt="" />
+            <h4 className='project-name'>Help Dog</h4>
             <p className='project-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.</p>
             <div className='project-tecs-container'>
               <p className='project-tecs'>Tecnologias usadas no projeto</p>
@@ -152,8 +128,8 @@ export default function Page() {
 
           <div className='project-item'>
             <Image width={800}
-      height={500} className= "project-img" src='/assets/img-dev.png' alt="" />
-            <h4 className='project-name'>Nome do projeto</h4>
+      height={500} className= "project-img" src='/assets/project2.svg' alt="" />
+            <h4 className='project-name'>NBA infos</h4>
             <p className='project-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.</p>
             <div className='project-tecs-container'>
               <p className='project-tecs'>Tecnologias usadas no projeto</p>
@@ -171,8 +147,8 @@ export default function Page() {
 
           <div className='project-item'>
             <Image width={800}
-      height={500} className= "project-img" src='/assets/img-dev.png' alt="" />
-            <h4 className='project-name'>Nome do projeto</h4>
+      height={500} className= "project-img" src='/assets/project3.svg' alt="" />
+            <h4 className='project-name'>La pizza</h4>
             <p className='project-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.</p>
             <div className='project-tecs-container'>
               <p className='project-tecs'>Tecnologias usadas no projeto</p>
@@ -190,8 +166,8 @@ export default function Page() {
 
           <div className='project-item'>
             <Image width={800}
-      height={500} className= "project-img" src='/assets/img-dev.png' alt="" />
-            <h4 className='project-name'>Nome do projeto</h4>
+      height={500} className= "project-img" src='/assets/project4.svg' alt="" />
+            <h4 className='project-name'>Portal Escolar</h4>
             <p className='project-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.</p>
             <div className='project-tecs-container'>
               <p className='project-tecs'>Tecnologias usadas no projeto</p>
@@ -206,11 +182,8 @@ export default function Page() {
             </div>
             <a href="/project-link" className='project-link'>Visualizar</a>
           </div>
-
-
         </div>
       </div>
-      <button id='toTop' style={{display: visible ? 'flex' : 'none'}} onClick={scrollToTop}>&#9650;</button>
       <footer>
         <div className='footer-content'><p>@ 2024 - Helliton Cruz</p></div>
       </footer>
